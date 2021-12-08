@@ -7,9 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="./styles.css" rel="stylesheet">
     <link href="./tailwind.css" rel="stylesheet">
+    <script type="text/javascript" src="./widget.js"></script>
     <title>Home | Tofpu</title>
 </head>
-<body class="overflow-auto">
+
+<body class="overflow-auto" onload="loadTheme()">
 
 <div class="flex flex-col h-screen justify-between">
     <div class="w-screen flex justify-center p-5">
@@ -117,6 +119,14 @@
 
     <div class="h-10 flex items-center justify-center">
         <p class="text-title-lighter px-5">Site was made by Tofpu!</p>
+    </div>
+
+    <div id="themeButton"
+         class="fixed bottom-1 right-1 select-none border-2 rounded-full bg-primary w-8 h-8 widget"
+         onclick="onThemeSwitch()">
+        <div class="flex justify-center text-center">
+            <p class="place-self-end text-center">🌓</p>
+        </div>
     </div>
 </div>
 </body>

@@ -8,6 +8,7 @@ class Widget {
         if (theme != null && theme !== '') {
             this.lightMode = theme;
         }
+        console.log('theme: ' + theme);
 
         this.action();
     }

@@ -1,13 +1,11 @@
 import '../styles/globals.css'
-import Head from 'next/head'
 
 function MyApp({ Component, pageProps }) {
-  return <>
-    <Head>
-      
-    </Head>
-    <Component {...pageProps} />
-  </>
+  return <Component {...pageProps} />
+}
+
+export function reportWebVitals(metric) {
+  console.log(metric)
 }
 
 export default MyApp

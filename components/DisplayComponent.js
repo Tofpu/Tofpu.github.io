@@ -14,7 +14,7 @@ export default class DisplayComponent extends PureComponent {
 
     render() {
         return (
-            <div className="flex flex-col h-screen justify-between">
+            <section className="flex flex-col h-screen justify-between">
                 <HeaderComponent/>
                 <BorderComponent/>
 
@@ -28,7 +28,7 @@ export default class DisplayComponent extends PureComponent {
                 <FooterComponent/>
 
                 <ThemeComponent/>
-            </div>
+            </section>
         );
     }
 }

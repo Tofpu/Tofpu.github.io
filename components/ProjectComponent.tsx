@@ -3,7 +3,7 @@ import {PureComponent} from "react";
 export default class ProjectComponent extends PureComponent {
     render() {
         return (
-            <div className="w-screen flex flex-col p-5 space-y-2.5 items-center justify-center">
+            <section className="w-screen flex flex-col p-5 space-y-2.5 items-center justify-center">
                 <div className="flex flex-col items-center justify-center">
                     <div className="text-title text-3xl hover:text-title-lighter"><b>Projects</b></div>
                     <div className="text-primary">
@@ -49,7 +49,7 @@ export default class ProjectComponent extends PureComponent {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         );
     }
 }

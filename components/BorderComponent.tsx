@@ -17,13 +17,13 @@ export default class BorderComponent extends PureComponent {
 
         if (center) {
             return (
-                <div className={extraParentClass + " " + BorderComponent.PARENT_CLASS}>
+                <section className={extraParentClass + " " + BorderComponent.PARENT_CLASS}>
                     <div className={BorderComponent.CENTER_BORDER_CLASS}/>
-                </div>
+                </section>
             )
         } else {
             return (
-                <div className={BorderComponent.BORDER_CLASS}/>
+                <section className={BorderComponent.BORDER_CLASS}/>
             )
         }
     }

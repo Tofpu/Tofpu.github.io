@@ -5,10 +5,13 @@ import IntroductionComponent from "./IntroductionComonent";
 import ProjectComponent from "./ProjectComponent";
 import ContactComponent from "./ContactComponent";
 import FooterComponent from "./FooterComponent";
-import Widget from "../pages/widget/Widget";
 import ThemeComponent from "./ThemeComponent";
 
 export default class DisplayComponent extends PureComponent {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return (
             <div className="flex flex-col h-screen justify-between">

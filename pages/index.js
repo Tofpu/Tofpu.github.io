@@ -1,6 +1,7 @@
 import DisplayComponent from "../components/DisplayComponent";
 import Widget from "../lib/Widget";
 import {useEffect} from 'react'
+import Head from "next/head"
 
 export default function Home() {
     useEffect(() => {
@@ -10,5 +11,10 @@ export default function Home() {
         }, 1000 * (1));
     });
 
-    return <DisplayComponent/>
+    return <>
+        <Head>
+            <title>Home | Tofpu</title>
+        </Head>
+        <DisplayComponent/>
+    </>
 }

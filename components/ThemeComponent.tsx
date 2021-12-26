@@ -1,5 +1,5 @@
 import {PureComponent} from "react";
-import Widget from "../pages/widget/Widget";
+import Widget from "../lib/Widget";
 
 export default class ThemeComponent extends PureComponent {
     render() {

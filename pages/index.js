@@ -1,5 +1,5 @@
 import DisplayComponent from "../components/DisplayComponent";
-import Widget from "./widget/Widget";
+import Widget from "../lib/Widget";
 import {useEffect} from 'react'
 
 export default function Home() {

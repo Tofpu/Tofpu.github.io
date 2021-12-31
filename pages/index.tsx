@@ -35,7 +35,7 @@ export default function Home ({allPostsData}) {
                 setSkip(false);
             }))
             .start(false);
-    }, []);
+    }, [showPlatforms, showProjects, startPlatform, writer]);
 
     console.log(allPostsData);
 

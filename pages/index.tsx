@@ -15,29 +15,29 @@ export default function Home ({allPostsData}) {
     const [showProjects, setProject] = useState(false);
     const [skipWriting, setSkip] = useState(true);
 
-    const writer = Writer.of();
-    useEffect(() => {
-        if (startPlatform || showPlatforms || showProjects) {
-            return;
-        }
-
-        writer.write(WriterObject.of(["greeting-1", "greeting-2", "greeting-3"], ["Hello", "there! I'm", "Tofpu!"], 1000, 0))
-            .write(WriterObject.of(["introduction-1", "introduction-2", "introduction-3", "introduction-4"], ["I'm a", "Web Developer|Bird Lover|Java Developer", "whose specializes in", "Bukkit Development."], 1000, 0))
-            .write(WriterObject.of(["platform"], ["I'm available at the following platforms:"], 1000, 1000, () => {
-                setStartPlatform(true);
-            }, () => {
-                setPlatform(true);
-            }))
-            .write(WriterObject.of(["project"], ["I have worked on the following projects:"], 1000, 1000, () => {
-                setStartProject(true);
-            }, () => {
-                setProject(true);
-                setSkip(false);
-            }))
-            .start(false);
-    }, [showPlatforms, showProjects, startPlatform, writer]);
-
-    console.log(allPostsData);
+    // const writer = Writer.of();
+    // useEffect(() => {
+    //     if (startPlatform || showPlatforms || showProjects) {
+    //         return;
+    //     }
+    //
+    //     writer.write(WriterObject.of(["greeting-1", "greeting-2", "greeting-3"], ["Hello", "there! I'm", "Tofpu!"], 1000, 0))
+    //         .write(WriterObject.of(["introduction-1", "introduction-2", "introduction-3", "introduction-4"], ["I'm a", "Web Developer|Bird Lover|Java Developer", "whose specializes in", "Bukkit Development."], 1000, 0))
+    //         .write(WriterObject.of(["platform"], ["I'm available at the following platforms:"], 1000, 1000, () => {
+    //             setStartPlatform(true);
+    //         }, () => {
+    //             setPlatform(true);
+    //         }))
+    //         .write(WriterObject.of(["project"], ["I have worked on the following projects:"], 1000, 1000, () => {
+    //             setStartProject(true);
+    //         }, () => {
+    //             setProject(true);
+    //             setSkip(false);
+    //         }))
+    //         .start(false);
+    // }, [showPlatforms, showProjects, startPlatform, writer]);
+    //
+    // console.log(allPostsData);
 
     return <>
         <Head>
@@ -45,7 +45,7 @@ export default function Home ({allPostsData}) {
         </Head>
         <DisplayComponent
             onSkip={() => {
-                writer.skipAll();
+                // writer.skipAll();
             }}
             isSkippable={startProject}
             skip={skipWriting}

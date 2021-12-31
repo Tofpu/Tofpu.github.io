@@ -1,26 +1,68 @@
-module.exports = {
-    content: [
-        "./pages/**/*.{js,ts,jsx,tsx}",
-        "./components/**/*.{js,ts,jsx,tsx}",
+const color = require("@k-vyn/coloralgorithm");
+
+const props = {
+    steps: 11,
+    hue: {
+        "start": 216,
+        "end": 222,
+        "curve": "easeOutQuad"
+    },
+    "saturation": {
+        "start": 0.07,
+        "end": 0.71,
+        "rate": 1,
+        "curve": "easeOutQuad"
+    },
+    "brightness": {
+        "start": 1,
+        "end": 0.03,
+        "curve": "linear"
+    }
+}
+
+const options = {
+    "minorSteps": [
+        0,
+        1
     ],
+    "name": "New Color",
+    "provideInverted": true,
+    "rotation": "clockwise"
+}
+
+const result = color.generate(props, options);
+
+console.log(result);
+console.log(result[1].colors);
+
+const resultColor = result[1].colors;
+
+const hex = resultColor[10].hex;
+const secondHex = resultColor[9].hex;
+const hoverHex = resultColor[8].hex;
+
+console.log('hover: ' + resultColor[4].hex);
+
+console.log('hex: ' + hex);
+
+module.exports = {
+    content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
     theme: {
         extend: {
-            spacing: {
-                '108': '27rem',
-                'max': '100rem'
-            },
             colors: {
-                'testPrimary': '#7752b4',
-                'primary': '#9c92ac',
-                'secondary': '#dfdbe5',
-                title: {
-                    DEFAULT: '#8470a2',
-                    light: 'rgba(132,112,162,0.9)',
-                    lighter: 'rgba(132,112,162,0.8)'
-                },
-                'hover': '#9c92ac'
+                'primary': hex,
+                'secondary': secondHex,
+                'hover': hoverHex,
+                'background': {
+                    'default': resultColor[0].hex,
+                    'light': resultColor[1].hex,
+                    'lighter': resultColor[2].hex,
+                    'lightest': resultColor[3].hex
+                }
             }
-        }
+        },
     },
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/typography')
+    ],
 }

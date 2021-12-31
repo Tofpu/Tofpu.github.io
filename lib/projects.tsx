@@ -12,9 +12,9 @@ export function getProjectsData() {
     const fileNames = fs.readdirSync(projectsDirectory);
 
     console.log(publicDirectory);
-    console.log(process.cwd());
+    console.log(fs.readdirSync(publicDirectory));
     console.log(path.join(process.cwd(), 'public'));
-    console.log(__dirname);
+    console.log(fs.readdirSync(path.join(process.cwd(), 'public')));
 
     return fileNames.map(fileName => {
         const id = fileName.replace(/\.md$/, '');

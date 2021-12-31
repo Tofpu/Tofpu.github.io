@@ -5,6 +5,7 @@ import DisplayComponent from "../components/DisplayComponent";
 import WriterObject from "../util/writer/WriterObject";
 import {getProjectsData} from '../lib/projects';
 import Head from "next/head";
+import LayoutComponent from "../components/LayoutComponent";
 
 // @ts-ignore
 export default function Home ({allPostsData}) {
@@ -43,20 +44,21 @@ export default function Home ({allPostsData}) {
         <Head>
             <title>Home | tofpu.me</title>
         </Head>
-        <DisplayComponent
-            onSkip={() => {
-                // writer.skipAll();
-            }}
-            isSkippable={startProject}
-            skip={skipWriting}
+        <LayoutComponent/>
+        {/*<DisplayComponent*/}
+        {/*    onSkip={() => {*/}
+        {/*        // writer.skipAll();*/}
+        {/*    }}*/}
+        {/*    isSkippable={startProject}*/}
+        {/*    skip={skipWriting}*/}
 
-            startPlatform={startPlatform}
-            showPlatforms={showPlatforms}
+        {/*    startPlatform={startPlatform}*/}
+        {/*    showPlatforms={showPlatforms}*/}
 
-            startProject={startProject}
-            showProjects={showProjects}
-            projects={allPostsData}
-        />
+        {/*    startProject={startProject}*/}
+        {/*    showProjects={showProjects}*/}
+        {/*    projects={allPostsData}*/}
+        {/*/>*/}
     </>
 }
 

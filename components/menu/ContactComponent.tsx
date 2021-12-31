@@ -1,5 +1,5 @@
 import React from "react";
-import SVGComponent from "../../wrapper/SVGComponent";
+import SVGComponent from "../wrapper/SVGComponent";
 
 export default class ContactComponent extends React.Component<any, any> {
     constructor(props: any) {

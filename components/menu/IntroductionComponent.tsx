@@ -1,5 +1,5 @@
 import React from "react";
-import ContactComponent from "./contact/ContactComponent";
+import ContactComponent from "./ContactComponent";
 
 export default class IntroductionComponent extends React.Component<any, any> {
     render() {

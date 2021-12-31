@@ -1,6 +1,6 @@
 import React from "react";
 import IntroductionComponent from "./IntroductionComponent";
-import ProjectComponent from "./project/ProjectComponent";
+import ProjectComponent from "./ProjectComponent";
 
 export default class MenuComponent extends React.Component<any, any> {
     render() {

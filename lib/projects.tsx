@@ -16,6 +16,11 @@ export function getProjectsData() {
         const fullPath = path.join(projectsDirectory, fileName);
         const fileContents = fs.readFileSync(fullPath, 'utf8');
 
+        console.log(publicDirectory);
+        console.log(process.cwd());
+        console.log(path.join(process.cwd(), 'public'));
+        console.log(__dirname);
+
         // Use gray-matter to parse the post metadata section
         const matterResult = matter(fileContents)
 

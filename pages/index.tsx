@@ -41,10 +41,10 @@ export default function Home ({allPostsData}) {
     // console.log(allPostsData);
 
     return <>
-        <Head>
-            <title>Home | tofpu.me</title>
-        </Head>
-        <LayoutComponent/>
+        {/*<Head>*/}
+        {/*    <title>Home | tofpu.me</title>*/}
+        {/*</Head>*/}
+        {/*<LayoutComponent/>*/}
         {/*<DisplayComponent*/}
         {/*    onSkip={() => {*/}
         {/*        // writer.skipAll();*/}

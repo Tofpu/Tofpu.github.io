@@ -46,7 +46,7 @@ export default function Home ({allPostsData}) {
         </Head>
         <DisplayComponent
             onSkip={() => {
-                // writer.skipAll();
+                writer.skipAll();
             }}
             isSkippable={startProject}
             skip={skipWriting}

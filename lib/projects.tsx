@@ -6,7 +6,7 @@ import {remark} from 'remark'
 import html from 'remark-html'
 
 const projectsDirectory = path.join(process.cwd(), 'projects');
-const publicDirectory = process.env.NODE_ENV !== 'production' ? path.join(process.cwd(), 'public') : process.cwd();
+const publicDirectory = path.join(process.cwd(), 'public');
 
 export function getProjectsData() {
     const fileNames = fs.readdirSync(projectsDirectory);

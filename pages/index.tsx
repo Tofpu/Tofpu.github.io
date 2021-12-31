@@ -7,7 +7,7 @@ import {getProjectsData} from '../lib/projects';
 import Head from "next/head";
 
 // @ts-ignore
-const Home: NextPage = ({allPostsData}) => {
+export default function Home ({allPostsData}) {
     const [startPlatform, setStartPlatform] = useState(false);
     const [showPlatforms, setPlatform] = useState(false);
 
@@ -69,5 +69,3 @@ export async function getStaticProps() {
         }
     }
 }
-
-export default Home

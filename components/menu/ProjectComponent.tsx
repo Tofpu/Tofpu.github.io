@@ -2,7 +2,7 @@ import React from "react";
 import SubProjectComponent from "./SubProjectComponent";
 
 export default class ProjectComponent extends React.Component<any, any> {
-    private static readonly PATH = process.env.NODE_ENV === 'production' ? "tofpu.github.io" : "";
+    private static readonly PATH = process.env.NODE_ENV === 'production' ? "tofpu.github.io/" : "";
 
     constructor(props: any) {
         super(props);

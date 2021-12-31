@@ -10,16 +10,17 @@ const publicDirectory = process.env.NODE_ENV !== 'production' ? path.join(proces
 
 export function getProjectsData() {
     const fileNames = fs.readdirSync(projectsDirectory);
+
+    console.log(publicDirectory);
+    console.log(process.cwd());
+    console.log(path.join(process.cwd(), 'public'));
+    console.log(__dirname);
+
     return fileNames.map(fileName => {
         const id = fileName.replace(/\.md$/, '');
 
         const fullPath = path.join(projectsDirectory, fileName);
         const fileContents = fs.readFileSync(fullPath, 'utf8');
-
-        console.log(publicDirectory);
-        console.log(process.cwd());
-        console.log(path.join(process.cwd(), 'public'));
-        console.log(__dirname);
 
         // Use gray-matter to parse the post metadata section
         const matterResult = matter(fileContents)

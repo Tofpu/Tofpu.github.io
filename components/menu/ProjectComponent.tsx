@@ -2,6 +2,8 @@ import React from "react";
 import SubProjectComponent from "./SubProjectComponent";
 
 export default class ProjectComponent extends React.Component<any, any> {
+    private static readonly PATH = process.env.NODE_ENV === 'production' ? "tofpu.github.io" : "";
+
     constructor(props: any) {
         super(props);
     }
@@ -29,7 +31,7 @@ export default class ProjectComponent extends React.Component<any, any> {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                     </svg>;
                 } else {
-                    image = <img className="max-h-[96px] max-w-[96px]" src={id + ".png"} alt={id}/>
+                    image = <img className="max-h-[96px] max-w-[96px]" src={ProjectComponent.PATH + id + ".png"} alt={id}/>
                 }
 
                 // @ts-ignore

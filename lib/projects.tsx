@@ -25,7 +25,7 @@ export function getProjectsData() {
         // Use gray-matter to parse the post metadata section
         const matterResult = matter(fileContents)
 
-        const fileImage = path.join(publicDirectory, fileName.replace("md", "png"));
+        const fileImage = path.join(publicDirectory, fileName.toLowerCase().replace("md", "png"));
         const imageExists = fs.existsSync(fileImage);
 
         // console.log(fileName);

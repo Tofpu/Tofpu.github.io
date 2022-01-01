@@ -56,6 +56,11 @@ module.exports = {
                 'primary': hex,
                 'secondary': secondHex,
                 'hover': hoverHex,
+                'other': {
+                    '5': resultColor[5].hex,
+                    '6': resultColor[6].hex,
+                    '7': resultColor[7].hex
+                },
                 'background': {
                     'default': resultColor[0].hex,
                     'light': resultColor[1].hex,

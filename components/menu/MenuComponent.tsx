@@ -5,7 +5,7 @@ import ProjectComponent from "./ProjectComponent";
 export default class MenuComponent extends React.Component<any, any> {
     render() {
         return (
-            <section className="w-full h-full flex flex-col text-primary gap-2.5 sm:gap-0">
+            <section className="w-full h-full flex flex-col text-primary gap-5 sm:gap-0 p-5">
                 <IntroductionComponent startPlatform={this.props.startPlatform}
                                        showPlatforms={this.props.showPlatforms}/>
 

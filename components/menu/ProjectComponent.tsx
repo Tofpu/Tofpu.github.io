@@ -50,7 +50,7 @@ export default class ProjectComponent extends React.Component<any, any> {
 
         return (
             <section className="w-full flex flex-col text-secondary sm:p-5">
-                <div className="flex justify-start sm:justify-center items-start sm:items-center gap-1">
+                <div className="flex justify-center items-start sm:items-center gap-1">
                     {startProject ? (
                         <svg xmlns="http://www.w3.org/2000/svg" className="svgColor h-6 w-6" fill="none"
                              viewBox="0 0 24 24"

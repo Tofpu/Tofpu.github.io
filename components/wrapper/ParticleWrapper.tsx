@@ -13,10 +13,6 @@ export default class ParticleWrapper extends React.Component<any, any> {
         const properties: ISourceOptions = particleFile;
         return (
             <Particles
-                init={() => {
-                }}
-                loaded={() => {
-                }}
                 options={properties}
             />
         );

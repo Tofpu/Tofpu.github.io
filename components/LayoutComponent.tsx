@@ -11,6 +11,10 @@ export default class LayoutComponent extends React.Component<any, any> {
                     <ParticleWrapper/>
                 </div>
             </div>
+
+            <section className="w-full flex justify-center text-primary/70">
+                <footer className="absolute bottom-5">Copyright @ {new Date().getFullYear()} Tofpu</footer>
+            </section>
         </>
     }
 }

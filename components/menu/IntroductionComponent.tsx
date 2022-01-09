@@ -7,11 +7,11 @@ export default class IntroductionComponent extends React.Component<any, any> {
             <section className="w-full gap-5 h-1/3 flex text-secondary flex-col sm:p-5">
                 <div>
                     <header className="flex text-xl sm:text-3xl">
-                        <h1 className="flex flex-wrap">
+                        <h2 className="flex flex-wrap">
                             <a id="greeting-1" className="hover font-semibold text-primary"/>&nbsp;
                             <a id="greeting-2"/>&nbsp;
                             <a id="greeting-3" className="hover font-semibold text-primary"/>
-                        </h1>
+                        </h2>
                     </header>
                     <section className="flex flex-row flex-wrap text-md sm:text-xl sm:gap-1.5">
                         <h2>

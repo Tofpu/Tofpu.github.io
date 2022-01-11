@@ -6,6 +6,7 @@ import WriterObject from "../util/writer/WriterObject";
 import {getProjectsData} from '../lib/projects';
 import Head from "next/head";
 import LayoutComponent from "../components/LayoutComponent";
+import {NextSeo} from "next-seo";
 
 // @ts-ignore
 export default function Home ({allPostsData}) {
@@ -41,9 +42,11 @@ export default function Home ({allPostsData}) {
     console.log(allPostsData);
 
     return <>
-        <Head>
-            <title>Home | tofpu.me</title>
-        </Head>
+        <NextSeo
+            title="Home | tofpu.me"
+            description="A portfolio site for Tofpu"
+        />
+
         <DisplayComponent
             onSkip={() => {
                 writer.skipAll();
